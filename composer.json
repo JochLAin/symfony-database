@@ -1,0 +1,25 @@
+{
+    "name": "jochlain/database",
+    "type": "symfony-bundle",
+    "version": "1.0.0",
+    "description": "Symfony Database Helpers",
+    "keywords": ["symfony", "database"],
+    "homepage": "http://jocelyn.faihy.fr",
+    "license": "SEE LICENSE IN LICENSE",
+    "authors": [{
+        "name": "Jocelyn Faihy",
+        "email": "jocelyn@faihy.fr"
+    }],
+    "require": {
+        "php": "^7.0.8",
+        "doctrine/doctrine-bundle": "^1.8",
+        "doctrine/orm": "^2.5"
+    },
+    "autoload": { "psr-4": { "Jochlain\\Database\\": "src/" }},
+    "extra": {
+        "symfony": {
+            "id": "01C18P5ZBMCNY47QYR2N5MJZ9H",
+            "allow-contrib": false
+        }
+    }
+}
