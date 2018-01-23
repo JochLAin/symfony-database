@@ -7,6 +7,16 @@ use Doctrine\ORM\Query\Lexer;
 use Doctrine\ORM\Query\Parser;
 use Doctrine\ORM\Query\SqlWalker;
 
+/**
+ * @namespace Jochlain\Database\DQL
+ * @class Unique
+ * @extends Doctrine\ORM\Query\AST\Functions\FunctionNode
+ *
+ * @property {string} $alias
+ * @property {array} $expressions
+ *
+ * @author Jocelyn Faihy <jocelyn@faihy.fr>
+ */
 class Unique extends FunctionNode
 {
     protected $alias;

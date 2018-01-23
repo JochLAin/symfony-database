@@ -6,6 +6,12 @@ use Doctrine\ORM\Mapping as ORM;
 
 use Jochlain\Database\Entity\StateEntityTrait;
 
+/**
+ * @namespace Jochlain\Database\Entity
+ * @class SoftDeleteEntityTrait
+ * 
+ * @author Jocelyn Faihy <jocelyn@faihy.fr>
+ */
 trait SoftDeleteEntityTrait
 {
     /**

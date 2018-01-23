@@ -7,6 +7,13 @@ use Doctrine\ORM\Query\Lexer;
 use Doctrine\ORM\Query\Parser;
 use Doctrine\ORM\Query\SqlWalker;
 
+/**
+ * @namespace Jochlain\Database\DQL
+ * @class Contains
+ * @extends Doctrine\ORM\Query\AST\Functions\FunctionNode
+ *
+ * @author Jocelyn Faihy <jocelyn@faihy.fr>
+ */
 class Contains extends FunctionNode
 {
     protected $left;

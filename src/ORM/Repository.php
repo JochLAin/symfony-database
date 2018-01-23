@@ -9,7 +9,11 @@ use Doctrine\ORM\QueryBuilder;
 use Doctrine\ORM\Query;
 
 /**
- * @author Jocelyn Faihy <jfaihy@gmail.com>
+ * @namespace Jochlain\Database\ORM
+ * @class Repository
+ * @extends Doctrine\ORM\EntityRepository
+ * 
+ * @author Jocelyn Faihy <jocelyn@faihy.fr>
  */
 class Repository extends EntityRepository
 {

@@ -7,7 +7,10 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 
 /**
- * @author Jocelyn Faihy <jfaihy@gmail.com>
+ * @namespace Jochlain\Database\Entity
+ * @class MagicEntityTrait
+ * 
+ * @author Jocelyn Faihy <jocelyn@faihy.fr>
  */
 trait MagicEntityTrait
 {

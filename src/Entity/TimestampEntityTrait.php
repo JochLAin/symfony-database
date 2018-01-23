@@ -4,6 +4,12 @@ namespace Jochlain\Database\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+/**
+ * @namespace Jochlain\Database\Entity
+ * @class TimestampEntityTrait
+ * 
+ * @author Jocelyn Faihy <jocelyn@faihy.fr>
+ */
 trait TimestampEntityTrait
 {
     /**

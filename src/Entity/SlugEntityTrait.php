@@ -4,6 +4,12 @@ namespace Jochlain\Database\Entity;
 
 use App\Utils\Slug;
 
+/**
+ * @namespace Jochlain\Database\Entity
+ * @class SlugEntityTrait
+ * 
+ * @author Jocelyn Faihy <jocelyn@faihy.fr>
+ */
 trait SlugEntityTrait
 {
     /**

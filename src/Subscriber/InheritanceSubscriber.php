@@ -10,6 +10,13 @@ use Doctrine\ORM\Mapping\ClassMetadata;
 
 use Jochlain\Database\MagicEntityTrait;
 
+/**
+ * @namespace Jochlain\Database\Subscriber
+ * @class InheritanceSubscriber
+ * @implements Doctrine\Common\EventSubscriber
+ *
+ * @author Jocelyn Faihy <jocelyn@faihy.fr>
+ */
 class InheritanceSubscriber implements EventSubscriber
 {
     public function getSubscribedEvents() {
