@@ -1,7 +1,7 @@
 {
     "name": "jochlain/database",
     "type": "symfony-bundle",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Symfony Database Helpers",
     "keywords": ["symfony", "database"],
     "homepage": "http://jocelyn.faihy.fr",
