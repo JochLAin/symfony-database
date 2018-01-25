@@ -36,7 +36,7 @@ services:
     Jochlain\Database\Manager\Query\FilterManager:
         arguments: ["@doctrine.orm.entity_manager"]
 
-    Jochlain\Database\Subscriber\InheritanceManager:
+    Jochlain\Database\Subscriber\InheritanceSubscriber:
         tags: ["doctrine.event_subscriber"]
 ```
 
