@@ -111,11 +111,10 @@ trait MagicEntityTrait
                 else if (in_array($plural, $properties)) return $this->$plural;
             case 'set':
                 if (in_array($plural, $properties) && $this->$plural instanceof Collection) {
-                    if (isset($parameters[0])) {
-                        foreach ($parameters[0] as $parameter) {
-                            $adder = 'add'.ucfirst($singular);
-                            $this->$adder($parameter);
-                        }
+                    if (!isset($parameters[0])) return $this;
+                    foreach ($parameters[0] as $parameter) {
+                        $adder = 'add'.ucfirst($singular);
+                        $this->$adder($parameter);
                     }
                     return $this;
                 } else if ($parameters instanceof \DateTime) {
@@ -129,6 +128,7 @@ trait MagicEntityTrait
             case 'add':
                 if ($property != $singular || !in_array($plural, $properties)) return;
                 if ($this->$plural instanceof Collection) {
+                    if (!isset($parameters[0])) return $this;
                     $entity = $parameters[0];
                     if (!$this->$plural->contains($entity)) $this->$plural->add($entity);
 
@@ -151,6 +151,7 @@ trait MagicEntityTrait
                     }
                     return $this;
                 } else if (is_array($this->$plural)) {
+                    if (!isset($parameters[0])) return $this;
                     $this->$plural[] = $parameters[0];
                     return $this;
                 }
@@ -158,9 +159,11 @@ trait MagicEntityTrait
             case 'remove':
                 if ($property != $singular || !in_array($plural, $properties)) return;
                 if ($this->$plural instanceof Collection) {
+                    if (!isset($parameters[0])) return $this;
                     $this->$plural->removeElement($parameters[0]);
                     return $this;
                 } else if (is_array($this->$plural)) {
+                    if (!isset($parameters[0])) return $this;
                     if (in_array($parameters[0], $this->$plural)) {
                         array_splice($this->$plural, array_search($this->$plural, $parameters[0]), 1);
                     }
@@ -170,8 +173,10 @@ trait MagicEntityTrait
             case 'has':
                 if ($property != $singular || !in_array($plural, $properties)) return;
                 if ($this->$plural instanceof Collection) {
+                    if (!isset($parameters[0])) return;
                     return $this->$plural->contains($parameters[0]);
                 } else if (is_array($this->$plural)) {
+                    if (!isset($parameters[0])) return;
                     return in_array($parameters[0], $this->$plural);
                 }
                 break;
