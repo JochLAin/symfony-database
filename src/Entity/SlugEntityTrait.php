@@ -12,9 +12,7 @@ use App\Utils\Slug;
  */
 trait SlugEntityTrait
 {
-    /**
-     * @ORM\Column(type="string")
-     */
+    /** @ORM\Column(type="string") */
     private $slug;
 
     /** @ORM\PrePersist @ORM\PreUpdate */

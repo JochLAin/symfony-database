@@ -12,10 +12,9 @@ use Doctrine\ORM\Mapping as ORM;
  */
 trait StateEntityTrait
 {
-    /**
-     * @ORM\Column(type="integer")
-     */
+    /** @ORM\Column(type="integer") */
     protected $state = 20;
+
     public function isInactive() { return $this->state <= getenv('ENTITY_STATE_INACTIVE') ?: 10; }
     public function isActive() { return $this->state >= getenv('ENTITY_STATE_ACTIVE') ?: 30; }
 
