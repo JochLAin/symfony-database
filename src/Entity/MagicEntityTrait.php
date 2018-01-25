@@ -111,9 +111,11 @@ trait MagicEntityTrait
                 else if (in_array($plural, $properties)) return $this->$plural;
             case 'set':
                 if (in_array($plural, $properties) && $this->$plural instanceof Collection) {
-                    foreach ($parameters[0] as $parameter) {
-                        $adder = 'add'.ucfirst($singular);
-                        $this->$adder($parameter);
+                    if (isset($parameters[0])) {
+                        foreach ($parameters[0] as $parameter) {
+                            $adder = 'add'.ucfirst($singular);
+                            $this->$adder($parameter);
+                        }
                     }
                     return $this;
                 } else if ($parameters instanceof \DateTime) {
